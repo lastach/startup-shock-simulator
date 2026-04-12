@@ -14,7 +14,7 @@ from typing import Dict, List, Tuple
 
 st.set_page_config(
     page_title="Startup Shock Simulator",
-    page_icon="â¡",
+    page_icon="⚡",
     layout="wide",
     initial_sidebar_state="collapsed"
 )
@@ -59,9 +59,9 @@ st.markdown("""
 
 CRISES = {
     1: {
-        "title": "ð´ CRISIS ALERT: The Server Meltdown",
-        "narrative": "Your viral social media post just brought 5,000 new signups in 2 hours. Your app is on fire... literally. The servers are down. Customers are furious. You have 30 seconds to act.",
-        "description": "Unexpected traffic has crashed your infrastructure. Your team is panicking. Customers are getting error pages.",
+        "title": "🔴 CRISIS ALERT: The Server Meltdown",
+        "narrative": "Success has turned into your first real crisis. Last week's traction was real—you signed 180 customers, hit $12K MRR, and the product is being shared organically. Now the success is breaking your infrastructure. Your viral moment brought 5,000 new signups in 2 hours. The servers are down. Customers are furious. You have 30 seconds to act.",
+        "description": "Unexpected traffic from your success has crashed your infrastructure. Your team is panicking. Customers are getting error pages. This is a crisis born from traction.",
         "options": [
             {
                 "letter": "A",
@@ -95,7 +95,7 @@ CRISES = {
         "worst_option": "D"
     },
     2: {
-        "title": "â ï¸ CRISIS ALERT: The Key Person Crisis",
+        "title": "⚠️ CRISIS ALERT: The Key Person Crisis",
         "narrative": "Your lead engineer (the only person who truly understands the codebase) just handed in their 2-week notice. They got an offer from a major tech company. Your entire technical foundation is walking out the door.",
         "description": "Your most critical team member is leaving. They're talented, irreplaceable, and going to a competitor. What do you do?",
         "options": [
@@ -131,7 +131,7 @@ CRISES = {
         "worst_option": "D"
     },
     3: {
-        "title": "ð¥ CRISIS ALERT: The Supplier Squeeze",
+        "title": "💥 CRISIS ALERT: The Supplier Squeeze",
         "narrative": "Your main component supplier just announced a 2x price increase effective immediately. Your hardware cost just doubled. Your margins are in freefall. You have 30 seconds to decide how to absorb this hit.",
         "description": "Your primary supplier has doubled their prices without warning. Your BOM (bill of materials) economics just broke. This is a margin killer.",
         "options": [
@@ -167,9 +167,9 @@ CRISES = {
         "worst_option": "B"
     },
     4: {
-        "title": "ð¨ CRISIS ALERT: The Customer Revolt",
-        "narrative": "Two catastrophes hit simultaneously: Your biggest enterprise client (15% of revenue) is threatening to leave over a bug they found. AND a viral 1-star review just hit social media blasting your product. You have 30 seconds to choose. There is no good option hereâonly less bad ones.",
-        "description": "Enterprise client revolt + viral negative review = existential threat. You must pick your poison.",
+        "title": "🚨 CRISIS ALERT: The Customer Revolt (No Good Options)",
+        "narrative": "Two catastrophes hit simultaneously: Your biggest enterprise client (15% of revenue) is threatening to leave over a bug they found. AND a viral 1-star review just hit social media blasting your product. You have 30 seconds to choose. This is intentionally a genuine dilemma. There is no good option here—only less bad ones. Every path forward costs you something critical.",
+        "description": "Enterprise client revolt + viral negative review = existential threat. All four options are painful. You must pick your poison. This is what real crisis management feels like.",
         "options": [
             {
                 "letter": "A",
@@ -203,7 +203,7 @@ CRISES = {
         "worst_option": "A"
     },
     5: {
-        "title": "ð OPPORTUNITY BOMB: Acquisition Offer",
+        "title": "💎 OPPORTUNITY BOMB: Acquisition Offer",
         "narrative": "A larger smart building company wants to acquire ThermaLoop for $2.5M. They're giving you 48 hours to decide. Your team is exhausted. Your runway is tight. This is the moment every founder dreams about... or nightmares about.",
         "description": "An acquisition offer has arrived in the chaos. $2.5M for ThermaLoop. 48 hours to decide. This is it.",
         "options": [
@@ -217,7 +217,7 @@ CRISES = {
             {
                 "letter": "B",
                 "title": "Counter at $4M",
-                "description": "Push back. You think you're worth more. Riskyâthey might walk.",
+                "description": "Push back. You think you're worth more. Risky—they might walk.",
                 "impact": {"Founder Energy": -20, "Team Morale": 0, "Customer Satisfaction": 0, "Cash Position": 0},
                 "narrative_impact": "They walk away. You're back to the grind with a demoralized team and an uncertain future."
             },
@@ -380,7 +380,7 @@ def display_crisis(week: int, crisis_data: Dict):
 
 def show_timed_decision(week: int, options: List[Dict]) -> str:
     """Display options with optional timer. Returns the selected option letter."""
-    st.subheader("â±ï¸ Your Move (30 seconds)")
+    st.subheader("⏱️ Your Move (30 seconds)")
 
     # Disable timer checkbox
     st.session_state.disable_timer = st.checkbox(
@@ -389,7 +389,7 @@ def show_timed_decision(week: int, options: List[Dict]) -> str:
     )
 
     if st.session_state.disable_timer:
-        st.info("â±ï¸ Timer disabled. Take your time.")
+        st.info("⏱️ Timer disabled. Take your time.")
         time_remaining = None
     else:
         time_remaining = 30
@@ -421,7 +421,7 @@ def show_timed_decision(week: int, options: List[Dict]) -> str:
                 progress = remaining / 30
                 st.progress(progress)
                 st.markdown(
-                    f'<p class="timer-warning">â³ Time remaining: {remaining} seconds</p>',
+                    f'<p class="timer-warning">⏳ Time remaining: {remaining} seconds</p>',
                     unsafe_allow_html=True
                 )
             time.sleep(0.5)
@@ -433,7 +433,7 @@ def show_timed_decision(week: int, options: List[Dict]) -> str:
             choice = worst_option
             timer_placeholder.empty()
             st.warning(
-                f"â° **Time's up!** Under pressure, you defaulted to **Option {choice}**. "
+                f"⏰ **Time's up!** Under pressure, you defaulted to **Option {choice}**. "
                 f"This wasn't your best choice."
             )
 
@@ -466,7 +466,7 @@ def display_option_details(option: Dict):
 def show_end_game_screen():
     """Display final results, archetype, and lessons."""
     st.markdown("---")
-    st.title("ð® GAME OVER: Your Startup Shock Survival Report")
+    st.title("🎮 GAME OVER: Your Startup Shock Survival Report")
 
     # Company Survival Score
     survival_score = sum([
@@ -480,18 +480,18 @@ def show_end_game_screen():
     st.metric("Company Survival Score", f"{survival_score:.0f}/100")
 
     if survival_score >= 80:
-        st.success("ð **THRIVING**: You navigated the chaos masterfully!")
+        st.success("🌟 **THRIVING**: You navigated the chaos masterfully!")
     elif survival_score >= 60:
-        st.info("ðª **SURVIVING**: You kept the company alive and learned hard lessons.")
+        st.info("💪 **SURVIVING**: You kept the company alive and learned hard lessons.")
     else:
-        st.warning("â ï¸ **STRUGGLING**: Your company is limping forward. Tough times ahead.")
+        st.warning("⚠️ **STRUGGLING**: Your company is limping forward. Tough times ahead.")
 
     # Final Metrics
-    st.subheader("ð Final Metrics")
+    st.subheader("📊 Final Metrics")
     display_metrics()
 
     # Founder Archetype
-    st.subheader("ð­ Your Founder Archetype")
+    st.subheader("🎭 Your Founder Archetype")
     archetype = determine_archetype()
     archetype_data = ARCHETYPES[archetype]
     st.markdown(f"""
@@ -503,7 +503,7 @@ def show_end_game_screen():
     """)
 
     # Cascade Visualization
-    st.subheader("ð Decision Cascade Analysis")
+    st.subheader("🔗 Decision Cascade Analysis")
     for week in range(1, 6):
         with st.expander(f"Week {week}: {CRISES[week]['title']}"):
             if week in st.session_state.decision_history:
@@ -519,12 +519,12 @@ def show_end_game_screen():
                         next_week = week + 1
                         st.markdown(f"**Downstream Effect on Week {next_week}:** ", end="")
                         if option['impact'].get("Team Morale", 0) < -30:
-                            st.markdown("ð´ Morale hit cascades into next week. Retention risk.")
+                            st.markdown("🔴 Morale hit cascades into next week. Retention risk.")
                         if option['impact'].get("Cash Position", 0) < -10000:
-                            st.markdown("ð¸ Cash burn accelerates. Tighter margins next week.")
+                            st.markdown("💸 Cash burn accelerates. Tighter margins next week.")
 
     # Lessons Learned
-    st.subheader("ð Lessons Learned")
+    st.subheader("📚 Lessons Learned")
     lessons = generate_lessons()
     for i, lesson in enumerate(lessons, 1):
         st.markdown(f"**{i}. {lesson}**")
@@ -596,7 +596,7 @@ def generate_lessons() -> List[str]:
     )
 
     if energy_drained < -50:
-        lessons.append("You burned bright but burned out fast. Next time, trust your team to lead. Delegation isn't weaknessâit's leverage.")
+        lessons.append("You burned bright but burned out fast. Next time, trust your team to lead. Delegation isn't weakness—it's leverage.")
 
     if cash_burned > 30000:
         lessons.append("Cash is oxygen. You spent it trying to solve everything at once. Next time, be ruthless about spending. Every dollar matters.")
@@ -617,7 +617,7 @@ def main():
     """Main game loop."""
     # INTRO SCREEN
     if st.session_state.current_week == 0 and not st.session_state.game_started:
-        st.title("â¡ STARTUP SHOCK SIMULATOR")
+        st.title("⚡ STARTUP SHOCK SIMULATOR")
         st.markdown("""
         ## Crisis Management for Founders
 
@@ -627,11 +627,11 @@ def main():
         Now comes the hard part: **surviving the chaos**.
 
         Over the next 5 weeks, your startup will face escalating crises. Each one will demand a choice.
-        Each choice will cost you something. Your job isn't to avoid damageâit's to minimize it.
+        Each choice will cost you something. Your job isn't to avoid damage—it's to minimize it.
 
         ---
 
-        ### ð Starting Position
+        ### 📋 Starting Position
 
         - **Company:** ThermaLoop (Smart Ventilation Retrofit Kits)
         - **Team:** 6 people (you + 5 employees)
@@ -639,26 +639,26 @@ def main():
         - **Cash in Bank:** $85,000
         - **Active Customers:** 180
 
-        ### â±ï¸ Time Estimate
+        ### ⏱️ Time Estimate
 
-        **~30-45 minutes** to play through all 5 crises.
+        **~30-45 minutes** to complete this simulation.
 
-        Each decision has a 30-second timer (which you can disable). There's no "perfect" answerâonly tradeoffs.
+        You'll face 5 crises over 5 weeks. Each decision has a 30-second timer (which you can disable). There's no "perfect" answer—only tradeoffs.
 
         ---
 
-        ### ð® How It Works
+        ### 🎮 How It Works
 
         1. Each week brings a new crisis
         2. You'll see 3-4 response options
         3. Each option has different tradeoffs (sacrifice one metric to save another)
-        4. Your choices cascadeâdecisions in Week 1 shape Week 2
+        4. Your choices cascade—decisions in Week 1 shape Week 2
         5. After Week 5, you'll get a survival score, founder archetype, and lessons learned
 
         **Ready?**
         """)
 
-        if st.button("ð START SIMULATION", use_container_width=True, type="primary"):
+        if st.button("🚀 START SIMULATION", use_container_width=True, type="primary"):
             st.session_state.game_started = True
             st.session_state.current_week = 1
             st.rerun()
@@ -695,14 +695,14 @@ def main():
             choice = st.session_state.decision_history[week]
             selected_option = next(o for o in crisis_data['options'] if o['letter'] == choice)
 
-            st.success(f"â Decision Made")
+            st.success(f"✅ Decision Made")
             display_option_details(selected_option)
 
             st.markdown("---")
 
             # Next week button
             if st.button(
-                "Next Week â" if week < 5 else "See Final Report â",
+                "Next Week →" if week < 5 else "See Final Report →",
                 use_container_width=True,
                 type="primary"
             ):
