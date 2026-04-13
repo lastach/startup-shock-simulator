@@ -517,7 +517,7 @@ def show_end_game_screen():
                     st.markdown(f"**Impact Narrative:** {option['narrative_impact']}")
                     if week < 5:
                         next_week = week + 1
-                        st.markdown(f"**Downstream Effect on Week {next_week}:** ", end="")
+                        st.markdown(f"**Downstream Effect on Week {next_week}:**")
                         if option['impact'].get("Team Morale", 0) < -30:
                             st.markdown("🔴 Morale hit cascades into next week. Retention risk.")
                         if option['impact'].get("Cash Position", 0) < -10000:
