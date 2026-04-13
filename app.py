@@ -59,184 +59,184 @@ st.markdown("""
 
 CRISES = {
     1: {
-        "title": "🔴 CRISIS ALERT: The Server Meltdown",
-        "narrative": "Success has turned into your first real crisis. Last week's traction was real—you signed 180 customers, hit $12K MRR, and the product is being shared organically. Now the success is breaking your infrastructure. Your viral moment brought 5,000 new signups in 2 hours. The servers are down. Customers are furious. You have 30 seconds to act.",
-        "description": "Unexpected traffic from your success has crashed your infrastructure. Your team is panicking. Customers are getting error pages. This is a crisis born from traction.",
+        "title": "👥 EARLY-STAGE MOMENT: Your First Real Hire",
+        "narrative": "ThermaLoop is 180 customers and $12K MRR. You've been doing every job — sales, support, install logistics, fundraising email. You're burning out and opportunities are slipping. You have budget for exactly one full-time hire. Pick carefully: your first hire sets the DNA of the company.",
+        "description": "Who do you bring on as your first employee? Your choice shapes the culture, the near-term metrics, and what you personally stop doing.",
         "options": [
             {
                 "letter": "A",
-                "title": "All-Hands Emergency Fix",
-                "description": "Drop everything. You and the team code through the night.",
-                "impact": {"Founder Energy": -25, "Team Morale": -15, "Customer Satisfaction": +30, "Cash Position": 0},
-                "narrative_impact": "You crush the fix by 3 AM. Servers are back up. Customers forgive you... but everyone is exhausted."
+                "title": "Senior Engineer",
+                "description": "Hire a strong builder. Ship product faster, reduce founder coding time.",
+                "impact": {"Founder Energy": +15, "Team Morale": +10, "Customer Satisfaction": +5, "Operational Capacity": +15, "Cash Position": -8000},
+                "narrative_impact": "Product velocity doubles. You stop writing code at midnight, but the sales pipeline still only moves when you move it."
             },
             {
                 "letter": "B",
-                "title": "Hire Emergency Contractor",
-                "description": "Call in a $3K SRE specialist from Slack. Fast, professional, done.",
-                "impact": {"Founder Energy": 0, "Team Morale": 0, "Customer Satisfaction": +20, "Cash Position": -3000},
-                "narrative_impact": "The contractor fixes it in 4 hours. Costly, but your team gets rest. Your runway just got shorter."
+                "title": "Operations Generalist",
+                "description": "Hire a scrappy ops lead to own scheduling, vendor comms, customer onboarding.",
+                "impact": {"Founder Energy": +25, "Team Morale": +10, "Customer Satisfaction": +15, "Operational Capacity": +25, "Cash Position": -6000},
+                "narrative_impact": "Twelve of your recurring tasks disappear overnight. You get back four hours a day. The team is noticeably less chaotic."
             },
             {
                 "letter": "C",
-                "title": "Apologize & Schedule Fix",
-                "description": "Go public with a transparent apology. Fix it next week.",
-                "impact": {"Founder Energy": 0, "Team Morale": 0, "Customer Satisfaction": -30, "Cash Position": 0},
-                "narrative_impact": "Your honesty is appreciated, but customers are skeptical. Some are churning. You bought time, but lost trust."
+                "title": "Sales Hire",
+                "description": "Hire a closer to drive new customer acquisition.",
+                "impact": {"Founder Energy": +5, "Team Morale": +5, "Customer Satisfaction": 0, "Operational Capacity": +5, "Cash Position": -9000},
+                "narrative_impact": "MRR grows modestly, but you're still the one handling onboarding, support, and ops. Hiring someone with no infrastructure to hand them leads doesn't pay off fast."
             },
             {
                 "letter": "D",
-                "title": "Emergency Weekend Sprint",
-                "description": "Push the team for a weekend fix. Mandatory all-hands.",
-                "impact": {"Founder Energy": -10, "Team Morale": -40, "Customer Satisfaction": +25, "Cash Position": 0},
-                "narrative_impact": "It's fixed by Sunday, but your team is bitter. Resentment is building. People are talking about leaving."
+                "title": "Stay Solo, Use Contractors",
+                "description": "No FTE. Keep burn low. String together freelancers as needed.",
+                "impact": {"Founder Energy": -15, "Team Morale": -10, "Customer Satisfaction": 0, "Operational Capacity": -5, "Cash Position": -1500},
+                "narrative_impact": "Cheap but fragile. Every contractor has to be re-onboarded. You're still doing everything and quietly hitting the wall."
             }
         ],
         "worst_option": "D"
     },
     2: {
-        "title": "⚠️ CRISIS ALERT: The Key Person Crisis",
-        "narrative": "Your lead engineer (the only person who truly understands the codebase) just handed in their 2-week notice. They got an offer from a major tech company. Your entire technical foundation is walking out the door.",
-        "description": "Your most critical team member is leaving. They're talented, irreplaceable, and going to a competitor. What do you do?",
+        "title": "🤝 EARLY-STAGE MOMENT: Cofounder Role Clarity",
+        "narrative": "You and your cofounder have been grinding side-by-side for 6 months, but tensions are building. You both keep stepping on each other's work — duplicating sales calls, disagreeing on product priorities, and quietly resenting decisions the other made. A small argument about a customer refund just turned into a 90-minute fight about 'who actually runs what.'",
+        "description": "Your cofounder relationship needs a reset. Roles were never formally defined. How do you handle it before it breaks the company?",
         "options": [
             {
                 "letter": "A",
-                "title": "Aggressive Counter-Offer",
-                "description": "Offer equity, salary bump, and a technical leadership role. Go big.",
-                "impact": {"Founder Energy": 0, "Team Morale": +15, "Customer Satisfaction": 0, "Cash Position": -8000},
-                "narrative_impact": "They stay! But you just burned $8K in cash and promised equity you may regret. Your runway compressed again."
+                "title": "Sit Down and Split Domains in Writing",
+                "description": "Block a half-day together. Draw a clear line: you own product + ops, they own sales + customers. Document it. Review monthly.",
+                "impact": {"Founder Energy": -5, "Team Morale": +20, "Customer Satisfaction": +5, "Operational Capacity": +15},
+                "narrative_impact": "The conversation is hard but productive. Clear ownership unlocks both of you. Decisions get faster. The team exhales."
             },
             {
                 "letter": "B",
-                "title": "Let Them Go Gracefully",
-                "description": "Thank them for their contribution. Start the search for a replacement.",
-                "impact": {"Founder Energy": 0, "Team Morale": -20, "Customer Satisfaction": 0, "Operational Capacity": -30},
-                "narrative_impact": "The team respects your professionalism, but you've just lost critical capacity. Sprints will slow down for weeks."
+                "title": "Avoid the Conversation, Stay Busy",
+                "description": "You're both adults. Focus on the work. The tension will fade once you hit your next milestone.",
+                "impact": {"Founder Energy": -25, "Team Morale": -20, "Customer Satisfaction": -5, "Operational Capacity": -15},
+                "narrative_impact": "Nothing fades. The passive-aggression leaks into team meetings. An early hire quietly updates their resume."
             },
             {
                 "letter": "C",
-                "title": "Take Over Their Duties",
-                "description": "You personally own their projects. You'll figure it out.",
-                "impact": {"Founder Energy": -50, "Team Morale": 0, "Customer Satisfaction": -10, "Operational Capacity": +10},
-                "narrative_impact": "You're drowning in code. Your attention splits everywhere. The business side of the company stalls."
+                "title": "Take Over Everything Yourself",
+                "description": "You're the CEO. Push your cofounder into a narrower lane. Own the big calls.",
+                "impact": {"Founder Energy": -35, "Team Morale": -15, "Customer Satisfaction": 0, "Cash Position": -2000},
+                "narrative_impact": "Your cofounder feels sidelined. You're now the bottleneck for every decision. Burnout risk just spiked."
             },
             {
                 "letter": "D",
-                "title": "Emergency Hiring Sprint",
-                "description": "Offer $120K base + signing bonus. Hire fast.",
-                "impact": {"Founder Energy": -15, "Team Morale": 0, "Customer Satisfaction": 0, "Cash Position": -15000},
-                "narrative_impact": "You hire someone capable in 2 weeks, but they're learning on the job. Quality dips. You're in serious cash crunch territory."
+                "title": "Bring in a Founder Coach",
+                "description": "Hire a $2K/month founder coach to facilitate a structured alignment conversation over 3 sessions.",
+                "impact": {"Founder Energy": +5, "Team Morale": +10, "Customer Satisfaction": 0, "Cash Position": -6000},
+                "narrative_impact": "The coach helps you both see patterns. Expensive, but you come out aligned with a real operating agreement."
+            }
+        ],
+        "worst_option": "B"
+    },
+    3: {
+        "title": "🧱 EARLY-STAGE MOMENT: The Founder Bottleneck",
+        "narrative": "You've noticed something uncomfortable: every decision — from which customer to email back to what color to use on the website — eventually lands on your desk. Your team of 3 keeps asking for your input. You're working 14-hour days and still falling behind. The team is capable, but they don't feel empowered to move without you.",
+        "description": "You are the bottleneck. The team can't scale past you until you change how you delegate. What's your move?",
+        "options": [
+            {
+                "letter": "A",
+                "title": "Write a Simple Decision Framework",
+                "description": "Spend a weekend documenting what decisions need you vs. what the team can own. Share it Monday. Trust them.",
+                "impact": {"Founder Energy": +20, "Team Morale": +25, "Customer Satisfaction": +10, "Operational Capacity": +25},
+                "narrative_impact": "The team surprises you. Within two weeks, they're making 70% of daily calls without escalating. You finally get to think strategically again."
+            },
+            {
+                "letter": "B",
+                "title": "Hire an Operations Lead",
+                "description": "Post a job for an ops manager. Pay $90K base. They'll own the day-to-day so you don't have to.",
+                "impact": {"Founder Energy": +10, "Team Morale": +5, "Customer Satisfaction": 0, "Cash Position": -15000},
+                "narrative_impact": "The ops lead starts in 5 weeks. Until then, you're still the bottleneck, burning cash, and the team is still stuck waiting on you."
+            },
+            {
+                "letter": "C",
+                "title": "Power Through, You're the Only One Who Gets It",
+                "description": "The team isn't ready. You'll keep making the calls until the company is bigger and hires are more senior.",
+                "impact": {"Founder Energy": -45, "Team Morale": -25, "Customer Satisfaction": -10, "Operational Capacity": -20},
+                "narrative_impact": "You hit the wall at week 4 — sick, exhausted, behind on everything. The team feels untrusted. Two quietly start interviewing."
+            },
+            {
+                "letter": "D",
+                "title": "Do a 'Founder-Free Week'",
+                "description": "Block your calendar for one week. No decisions from you. The team runs the show. See what breaks.",
+                "impact": {"Founder Energy": +15, "Team Morale": +15, "Customer Satisfaction": -5, "Operational Capacity": +10},
+                "narrative_impact": "A few things wobble, but the team rises to it. You learn exactly which decisions actually need you — and which were just habit."
+            }
+        ],
+        "worst_option": "C"
+    },
+    4: {
+        "title": "💔 EARLY-STAGE MOMENT: Culture Crack",
+        "narrative": "Your first hire just sent a long Slack DM: they feel the culture has shifted. Meetings run long, feedback is one-way, and nobody celebrates wins anymore. Two other team members quietly reacted with 💯. This is the first real signal that the team's energy is fraying — and you didn't see it coming.",
+        "description": "The team's early energy is fading. Early culture signals matter more than anything else at your stage. What do you do?",
+        "options": [
+            {
+                "letter": "A",
+                "title": "Schedule 1:1s With Everyone This Week",
+                "description": "Put 30 minutes with each team member on the calendar. Ask: what's working, what's not, what would you change tomorrow?",
+                "impact": {"Founder Energy": -10, "Team Morale": +30, "Customer Satisfaction": +5, "Operational Capacity": +10},
+                "narrative_impact": "You hear hard things. But people feel heard. Three concrete changes come out of the conversations. Trust compounds."
+            },
+            {
+                "letter": "B",
+                "title": "Send a Team-Wide Apology + Plan",
+                "description": "Write a thoughtful message acknowledging the drift. Share 3 changes you'll make. Ship them this week.",
+                "impact": {"Founder Energy": -5, "Team Morale": +15, "Customer Satisfaction": 0, "Operational Capacity": +5},
+                "narrative_impact": "A public acknowledgment matters, but it's one-way communication. Some team members appreciate it, others want a real conversation."
+            },
+            {
+                "letter": "C",
+                "title": "Ignore It — Push Through the Sprint",
+                "description": "You're 2 weeks from shipping the next release. Culture can wait. Results cure morale.",
+                "impact": {"Founder Energy": -20, "Team Morale": -35, "Customer Satisfaction": -15, "Operational Capacity": -25},
+                "narrative_impact": "You ship, but the best hire gives notice the following Monday. The team watches to see how you respond. This is the story they'll tell about you."
+            },
+            {
+                "letter": "D",
+                "title": "Plan a Team Offsite",
+                "description": "Book a $6K offsite for 2 days next month. Get everyone out of the office. Rebuild connection.",
+                "impact": {"Founder Energy": 0, "Team Morale": +10, "Customer Satisfaction": 0, "Cash Position": -6000},
+                "narrative_impact": "The offsite is fun, but 'next month' is a long time when trust is fraying right now. You needed a quicker touch first."
+            }
+        ],
+        "worst_option": "C"
+    },
+    5: {
+        "title": "⚙️ EARLY-STAGE MOMENT: Processes That Scale",
+        "narrative": "You're now 6 people and 220 customers. What worked at 3 people is breaking: onboarding is inconsistent, customer support lives in one person's head, and you just missed a renewal because nobody tracked it. Your team is good, but the lack of process is costing real money and real trust.",
+        "description": "You've outgrown 'everyone figures it out.' The team needs light operating systems — without killing the scrappy energy. What's your approach?",
+        "options": [
+            {
+                "letter": "A",
+                "title": "Have the Team Build the Playbooks",
+                "description": "Ask each person to document the top 3 things they do. Share back next Friday. You edit, not write.",
+                "impact": {"Founder Energy": +10, "Team Morale": +20, "Customer Satisfaction": +20, "Operational Capacity": +30},
+                "narrative_impact": "Ownership emerges organically. The playbooks aren't perfect, but they're real, used, and improved weekly. Renewals stop slipping through."
+            },
+            {
+                "letter": "B",
+                "title": "Write Every Process Yourself, Top-Down",
+                "description": "You know how things should work. Lock yourself in for a week and write the company manual.",
+                "impact": {"Founder Energy": -40, "Team Morale": -15, "Customer Satisfaction": +5, "Operational Capacity": +10},
+                "narrative_impact": "You produce 40 pages nobody reads. The team feels micromanaged. The processes don't match how work actually happens."
+            },
+            {
+                "letter": "C",
+                "title": "Buy a SaaS Tool to Fix It",
+                "description": "Sign up for a $400/mo ops platform. Configure it in a weekend. Tool-first approach.",
+                "impact": {"Founder Energy": -10, "Team Morale": -5, "Customer Satisfaction": 0, "Cash Position": -4800},
+                "narrative_impact": "The tool is powerful but misconfigured. Adoption is spotty. A tool doesn't solve a process problem — it just digitizes confusion."
+            },
+            {
+                "letter": "D",
+                "title": "Wait Until Something Breaks Badly",
+                "description": "Process is bureaucracy. You'll formalize when the team is 15+. Until then, stay nimble.",
+                "impact": {"Founder Energy": -15, "Team Morale": -10, "Customer Satisfaction": -25, "Operational Capacity": -30},
+                "narrative_impact": "Three weeks later a customer gets double-billed, an onboarding falls apart, and a support ticket sits for 8 days. You're firefighting again."
             }
         ],
         "worst_option": "D"
-    },
-    3: {
-        "title": "💥 CRISIS ALERT: The Supplier Squeeze",
-        "narrative": "Your main component supplier just announced a 2x price increase effective immediately. Your hardware cost just doubled. Your margins are in freefall. You have 30 seconds to decide how to absorb this hit.",
-        "description": "Your primary supplier has doubled their prices without warning. Your BOM (bill of materials) economics just broke. This is a margin killer.",
-        "options": [
-            {
-                "letter": "A",
-                "title": "Absorb the Cost",
-                "description": "Eat the margin hit. Keep prices the same. Protect customer relationships.",
-                "impact": {"Founder Energy": 0, "Team Morale": 0, "Customer Satisfaction": +10, "Cash Position": -12000},
-                "narrative_impact": "Customers love you, but your unit economics are now terrible. Monthly burn is accelerating."
-            },
-            {
-                "letter": "B",
-                "title": "Pass the Cost to Customers",
-                "description": "Raise prices by 30%. Let the market decide.",
-                "impact": {"Founder Energy": 0, "Team Morale": 0, "Customer Satisfaction": -35, "Cash Position": 0},
-                "narrative_impact": "You hit cash break-even, but customers are shocked. Churn accelerates. Some are looking at competitors."
-            },
-            {
-                "letter": "C",
-                "title": "Negotiate + Find Alternatives",
-                "description": "Work the supplier relationship hard. Qualify an alternative. This takes your time.",
-                "impact": {"Founder Energy": -30, "Team Morale": 0, "Customer Satisfaction": 0, "Cash Position": -4000},
-                "narrative_impact": "You find a new supplier at 1.5x the original price. Better than 2x, but still a hit. You've bought yourself breathing room."
-            },
-            {
-                "letter": "D",
-                "title": "Redesign with Cheaper Components",
-                "description": "Pivot the product. Substitute components for cheaper alternatives. Major engineering lift.",
-                "impact": {"Founder Energy": -20, "Team Morale": -15, "Customer Satisfaction": -10, "Operational Capacity": -40},
-                "narrative_impact": "You're stuck in a 6-week redesign. Features ship slower. The team is frustrated with the pivot."
-            }
-        ],
-        "worst_option": "B"
-    },
-    4: {
-        "title": "🚨 CRISIS ALERT: The Customer Revolt (No Good Options)",
-        "narrative": "Two catastrophes hit simultaneously: Your biggest enterprise client (15% of revenue) is threatening to leave over a bug they found. AND a viral 1-star review just hit social media blasting your product. You have 30 seconds to choose. This is intentionally a genuine dilemma. There is no good option here—only less bad ones. Every path forward costs you something critical.",
-        "description": "Enterprise client revolt + viral negative review = existential threat. All four options are painful. You must pick your poison. This is what real crisis management feels like.",
-        "options": [
-            {
-                "letter": "A",
-                "title": "All-In on Enterprise Client",
-                "description": "Drop everything. Dedicate the team to fixing their issue. Ignore the viral review.",
-                "impact": {"Founder Energy": -30, "Team Morale": -25, "Customer Satisfaction": -40, "Operational Capacity": -20},
-                "narrative_impact": "You save the enterprise client, but the viral review spirals. Other customers start leaving. Your brand is damaged."
-            },
-            {
-                "letter": "B",
-                "title": "Address the Viral Review",
-                "description": "Go public. Respond thoughtfully. Offer refunds. Control the narrative.",
-                "impact": {"Founder Energy": -15, "Team Morale": 0, "Customer Satisfaction": -25, "Cash Position": -5000},
-                "narrative_impact": "The review narrative softens, but the enterprise client feels abandoned. You may lose them anyway."
-            },
-            {
-                "letter": "C",
-                "title": "Split the Team",
-                "description": "Half the team on enterprise client, half on damage control. Coordinate carefully.",
-                "impact": {"Founder Energy": -25, "Team Morale": -30, "Customer Satisfaction": -20, "Operational Capacity": -25},
-                "narrative_impact": "You address both, but nothing gets done well. Team feels scattered. Everyone is exhausted and frustrated."
-            },
-            {
-                "letter": "D",
-                "title": "Take a Deep Breath. Prioritize Strategically.",
-                "description": "Enterprise client gets a personal call and roadmap for fixes. Public review gets a thoughtful, transparent response.",
-                "impact": {"Founder Energy": -20, "Team Morale": -10, "Customer Satisfaction": -15, "Operational Capacity": -15},
-                "narrative_impact": "You address both, acknowledging the pain. You don't fix everything, but people respect your composure."
-            }
-        ],
-        "worst_option": "A"
-    },
-    5: {
-        "title": "💎 OPPORTUNITY BOMB: Acquisition Offer",
-        "narrative": "A larger smart building company wants to acquire ThermaLoop for $2.5M. They're giving you 48 hours to decide. Your team is exhausted. Your runway is tight. This is the moment every founder dreams about... or nightmares about.",
-        "description": "An acquisition offer has arrived in the chaos. $2.5M for ThermaLoop. 48 hours to decide. This is it.",
-        "options": [
-            {
-                "letter": "A",
-                "title": "Take the Deal",
-                "description": "Accept the $2.5M offer. Cash out. Celebrate.",
-                "impact": {"Founder Energy": 50, "Team Morale": 0, "Customer Satisfaction": 0, "Cash Position": 2500000},
-                "narrative_impact": "You exit. You're a founder who built and sold a company. Success. But... was this the dream?"
-            },
-            {
-                "letter": "B",
-                "title": "Counter at $4M",
-                "description": "Push back. You think you're worth more. Risky—they might walk.",
-                "impact": {"Founder Energy": -20, "Team Morale": 0, "Customer Satisfaction": 0, "Cash Position": 0},
-                "narrative_impact": "They walk away. You're back to the grind with a demoralized team and an uncertain future."
-            },
-            {
-                "letter": "C",
-                "title": "Decline and Double Down",
-                "description": "Turn it down. You're going for unicorn status. Build independently.",
-                "impact": {"Founder Energy": -40, "Team Morale": +50, "Customer Satisfaction": 0, "Operational Capacity": 0},
-                "narrative_impact": "Your team rallies behind the vision. But the pressure is immense. The next 18 months will be brutal."
-            },
-            {
-                "letter": "D",
-                "title": "Ask for 2 More Weeks",
-                "description": "Negotiate more time. Get your team's input. Make a deliberate choice.",
-                "impact": {"Founder Energy": -10, "Team Morale": +20, "Customer Satisfaction": 0, "Cash Position": 0},
-                "narrative_impact": "They grant 2 weeks. You bring the team into the decision. Whatever you choose feels like your choice, not their deadline."
-            }
-        ],
-        "worst_option": "B"
     }
 }
 
