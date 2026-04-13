@@ -358,8 +358,8 @@ def failure_conditions_triggered() -> List[str]:
         )
     if st.session_state.metrics["Founder Energy"] < 20:
         triggered.append(
-            "**Founder burnout threshold:** Founder Energy below 20 corresponds in Wasserman's data to the "
-            "'12-month exit' cohort — founders who resign or get replaced within a year of this state."
+            "**Founder burnout threshold:** Founder Energy below 20 is the state most correlated "
+            "with a 12-month exit — founders who resign or get replaced within a year of reaching it."
         )
     return triggered
 
@@ -648,15 +648,9 @@ def determine_archetype() -> str:
 
 def generate_lessons() -> List[str]:
     """
-    Generate principle-based lessons (not behavior-based) grounded in named
-    organizational-behavior literature:
-      - Hackman (2002, Leading Teams): CORE conditions — direction, structure,
-        context, coaching.
-      - Lencioni (2002, 5 Dysfunctions): trust → conflict → commitment →
-        accountability → results.
-      - Wasserman (2012, Founder's Dilemmas): founder role burnout and delegation
-        timing.
-      - Kahneman (2011): decision-making under scarcity and System-1 defaults.
+    Generate principle-based lessons tied to the decision patterns the learner
+    actually exhibited — founder energy drained, cash burned under duress,
+    morale compressed. Each lesson names a mechanism (not a framework).
     """
     lessons = []
 
@@ -678,37 +672,41 @@ def generate_lessons() -> List[str]:
 
     if energy_drained < -50:
         lessons.append(
-            "**Founder-as-bottleneck (Wasserman, *The Founder's Dilemmas*, 2012, Ch. 9).** "
-            "You absorbed too much of the crisis response personally. In Wasserman's 10,000-founder dataset, "
-            "founders who do not transition out of operator-mode by week 12 of a crisis are 2.3x more likely "
-            "to be replaced by the board within 18 months. The principle is *role clarity*, not heroism."
+            "**Founder-as-bottleneck.** "
+            "You absorbed too much of the crisis response personally. Founders who do not transition "
+            "out of operator-mode by roughly week 12 of a sustained crisis are meaningfully more "
+            "likely to be replaced within 18 months. The fix is *role clarity*, not heroism — name "
+            "which decisions you own, which the team owns, and stop merging them."
         )
 
     if cash_burned > 30000:
         lessons.append(
-            "**Runway discipline (Graham, 'How Not to Die,' 2007).** "
-            "Cash is *optionality*. Every dollar spent under duress converts optionality into a single path. "
-            "The principle: in crisis, spend on information (tests, hires that generate data) before spending "
-            "on *solutions* (retainers, marketing, comped features). You prioritized solutions."
+            "**Cash is optionality.** "
+            "Every dollar spent under duress converts optionality into a single path. In crisis, "
+            "spend on *information* (tests, hires that generate data, short consultations) before "
+            "spending on *solutions* (retainers, marketing, comped features). You prioritized "
+            "solutions — which locked you into a specific bet before the data supported it."
         )
 
     if morale_impact < -40:
         lessons.append(
-            "**Psychological safety (Edmondson, 1999; Google Project Aristotle, 2015).** "
-            "Team morale below 40 doesn't cause attrition next month — it causes your top performers to "
-            "*stop surfacing bad news now*. This is Lencioni's Dysfunction #2 (fear of conflict) accelerating "
-            "toward #5 (inattention to results). The principle is that in crisis, information flow collapses "
-            "first in low-trust teams; decisions then happen on stale data."
+            "**Low morale silences your best signal first.** "
+            "Team morale below 40 doesn't cause attrition next month — it causes your top "
+            "performers to *stop surfacing bad news now*. Fear-of-conflict compounds into "
+            "inattention-to-results; information flow collapses first in low-trust teams, and "
+            "decisions then happen on stale data. Restoring morale is about restoring the "
+            "feedback loop, not the mood."
         )
 
     # Structural lesson: always provide one grounding lesson regardless of play
     if len(lessons) < 3:
         lessons.append(
-            "**Tradeoff primacy (Hackman, *Leading Teams*, 2002).** "
-            "No crisis decision was 'right' — each shock was engineered so all options had a cost. "
-            "The core leadership skill this sim tests is the *explicit articulation of the tradeoff* "
-            "before the decision. In Hackman's CORE framework, the conditions that distinguish effective "
-            "teams are not their tools but the clarity of the direction set under pressure."
+            "**Every decision was a tradeoff, not a puzzle with a right answer.** "
+            "Each shock was engineered so all options had a cost. The leadership skill this "
+            "sim tests is the *explicit articulation of the tradeoff* before the decision — "
+            "what you're buying, what you're giving up, and what evidence would flip the call. "
+            "Teams executing under pressure are distinguished by the clarity of the direction "
+            "set, not the sophistication of the tools used."
         )
 
     return lessons[:3]
